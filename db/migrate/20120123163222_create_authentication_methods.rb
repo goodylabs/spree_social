@@ -5,6 +5,7 @@ class CreateAuthenticationMethods < ActiveRecord::Migration
       t.string :provider
       t.string :api_key
       t.string :api_secret
+      t.string :scope
       t.boolean :active
 
       t.timestamps
