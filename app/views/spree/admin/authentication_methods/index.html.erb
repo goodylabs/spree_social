@@ -13,6 +13,7 @@
     <th><%= Spree.t("social_provider") %></th>
     <th><%= Spree.t("social_api_key") %></th>
     <th><%= Spree.t("social_api_secret") %></th>
+    <th><%= Spree.t("social_scope") %></th>
     <th><%= Spree.t("environment") %></th>
     <th><%= Spree.t("active") %></th>
     <th data-hook="admin_social_methods_index_header_actions">&nbsp;</th>
@@ -23,6 +24,7 @@
         <td><%= method.provider %></td>
         <td><%= truncate method.api_key, :length => 20 %></td>
         <td><%= truncate method.api_secret, :length => 20 %></td>
+        <td><%= truncate method.scope %></td>
         <td><%= method.environment.to_s.titleize %></td>
         <td><%= method.active ? Spree.t(:yes) : Spree.t(:no) %></td>
         <td>
