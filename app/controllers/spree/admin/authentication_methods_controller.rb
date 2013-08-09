@@ -9,9 +9,7 @@ module Spree
       def update_oauth_method
         auth_method = params[:authentication_method]
         if auth_method[:active] == "true" && auth_method[:environment] == ::Rails.env
-          Devise.setup do |config|
-            config.omniauth auth_method[:provider], auth_method[:api_key], auth_method[:api_secret]
-          end
+          SpreeSocial.setup_key_for(:provider, auth_method[:api_key], auth_method[:api_secret], auth_method[:scope])
         end
       end
     end
