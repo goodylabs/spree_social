@@ -3,6 +3,8 @@ SpreeSocial
 [![Build Status](https://travis-ci.org/spree/spree_social.png)](https://travis-ci.org/spree/spree_social)
 
 
+**NOTE: If you were contributing to the 0.70.x version of this extension, please make sure you are using the 0_70_stable branch, as this branch has recently been forced push to in order to release the 1.0.x extension rewrite.**
+
 Core for all social media related functionality for Spree. 
 The Spree Social gem handles authorization, account creation and association through social media sources such as Twitter and Facebook. 
 This requires the edge source of [Spree](https://github.com/spree/spree). 
@@ -26,7 +28,7 @@ rails g spree_social:install
 bundle exec rake db:migrate
 ```
 
-Preference(optional): By default url will be '/users/auth/:provider'. If you wish to modify the url to: '/member/auth/:provider', '/profile/auth/:provider', or '/auth/:provider' then you can do this accordingly in your **config/initializers/spree.rb** file as described below -
+Preference(optional): By default url will be '/user/auth/:provider'. If you wish to modify the url to: '/member/auth/:provider', '/profile/auth/:provider', or '/auth/:provider' then you can do this accordingly in your **config/initializers/spree.rb** file as described below -
 
 ```ruby
 Spree::SocialConfig[:path_prefix] = 'member' # for /member/auth/:provider
